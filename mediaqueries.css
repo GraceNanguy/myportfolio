@@ -23,9 +23,20 @@
   .experience-details-container {
     margin-top: 2rem;
   }
+  img {
+    max-width: 100%; /* L'image ne dépassera pas 100% de son conteneur */
+    width: auto;
+    height: auto;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    
+    }
   #profile,
   .section-container {
-    display: block;
+    display: flex;
+    flex-direction: column; /* Adjust profile and section container layout */
   }
   .arrow {
     display: none;
@@ -33,8 +44,6 @@
   section,
   .section-container {
     height: fit-content;
-  }
-  section {
     margin: 0 5%;
   }
   .section__pic-container {
@@ -44,6 +53,7 @@
   }
   .about-containers {
     margin-top: 0;
+    flex-wrap: wrap; /* Add wrapping for better responsiveness */
   }
 }
 
@@ -54,7 +64,11 @@
   }
   #profile {
     height: 83vh;
-    margin-bottom: 0;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column; /* Ensure column layout on smaller screens */
+    justify-content: center;
+    align-items: center;
   }
   article {
     font-size: 1rem;
@@ -87,7 +101,7 @@
     text-align: center;
   }
   .section__pic-container {
-    width: auto;
+    width: 50%;
     height: 46vw;
     justify-content: center;
   }
@@ -96,6 +110,7 @@
   }
   .title {
     font-size: 2rem;
+    text-align: center; /* Center align the title */
   }
   .text-container {
     text-align: justify;
