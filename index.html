@@ -8,36 +8,38 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
+  
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Grace Maria</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">A propos</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">A propos</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projets</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
+    <!-- Navigation pour grand écran -->
+<nav id="desktop-nav" class="flex justify-between items-center p-4">
+  <div class="logo font-bold text-xl">Grace Maria</div>
+  <ul class="nav-links hidden md:flex space-x-4">
+    <li><a href="#about" class="hover:text-gray-600">À propos</a></li>
+    <li><a href="#experience" class="hover:text-gray-600">Expérience</a></li>
+    <li><a href="#projects" class="hover:text-gray-600">Projets</a></li>
+    <li><a href="#contact" class="hover:text-gray-600">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Navigation pour petit écran (hamburger) -->
+<nav id="hamburger-nav" class="md:hidden flex justify-between items-center p-4">
+  <div class="logo font-bold text-xl">Grace Maria</div>
+  <div class="hamburger-icon cursor-pointer" onclick="toggleMenu()">
+    <span class="block w-6 h-0.5 bg-black mb-1"></span>
+    <span class="block w-6 h-0.5 bg-black mb-1"></span>
+    <span class="block w-6 h-0.5 bg-black"></span>
+  </div>
+  <div id="menu-links" class="menu-links hidden absolute top-16 left-0 w-full bg-white shadow-lg p-4 space-y-2">
+    <li><a href="#about" class="block" onclick="toggleMenu()">À propos</a></li>
+    <li><a href="#experience" class="block" onclick="toggleMenu()">Expérience</a></li>
+    <li><a href="#projects" class="block" onclick="toggleMenu()">Projets</a></li>
+    <li><a href="#contact" class="block" onclick="toggleMenu()">Contact</a></li>
+  </div>
+</nav>
+
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+        <img src="./assets/profile-pic.png" alt=" profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Salut, Je suis</p>
@@ -129,21 +131,11 @@
                   class="icon"
                 />
                 <div>
-                  <h3>HTML</h3>
+                  <h3>HTML/CSS</h3>
                   <p>Experimenté</p>
                 </div>
               </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experimenté</p>
-                </div>
-              </article>
+             
               <article>
                 <img
                   src="./assets/checkmark.png"
@@ -162,8 +154,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>JavaScript</h3>
-                  <p>Basique</p>
+                  <h3>Next js</h3>
+                  <p>Intermediaire</p>
                 </div>
               </article>
               <article>
@@ -174,7 +166,7 @@
                 />
                 <div>
                   <h3>Figma</h3>
-                  <p>Intermediaire</p>
+                  <p>Experimenté</p>
                 </div>
               </article>
               <article>
@@ -191,7 +183,7 @@
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Autre Langage</h2>
             <div class="article-container">
               <article>
                 <img
@@ -200,7 +192,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Boostrap</h3>
+                  <h3>Langage C</h3>
                   <p>Intermédiaire</p>
                 </div>
               </article>
@@ -211,7 +203,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Laravel</h3>
+                  <h3>Firebase</h3>
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -222,8 +214,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>PHP</h3>
-                  <p>Basique</p>
+                  <h3> PHP </h3>
+                  <p>Intermediaire</p>
                 </div>
               </article>
               <article>
@@ -245,7 +237,7 @@
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
-        onclick="location.href='./#projects'"
+        onclick="location.href='#projects'"
       />
     </section>
     <section id="projects">
@@ -255,13 +247,13 @@
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
-             <a href="https://www.figma.com/design/bDX85ov5aIAMvMy0zaKVzA/Gestion-de-budget-perso?node-id=1022-299&node-type=CANVAS&t=zUE8CaEWvPghSIHJ-0"> <img 
+             <a href="#"> <img 
                 src="./assets/project-1.png"
                 alt="Project 1"
                 class="project-img"
               /></a>
             </div>
-            <h2 class="experience-sub-title project-title">Projet Un</h2>
+            <h2 class="experience-sub-title project-title">Ecommerce App</h2>
           
           </div>
           <div class="details-container color-container">
@@ -272,18 +264,18 @@
                 class="project-img"
               /></a>
             </div>
-            <h2 class="experience-sub-title project-title">Projet Deux</h2>
+            <h2 class="experience-sub-title project-title">Landing Page</h2>
            
           </div>
           <div class="details-container color-container">
             <div class="article-container">
-            <a href="https://www.figma.com/design/H5SK3XIwjzo1Ucddije7PC/Ecommerce-Mobile-App-UI-(Mpa-cosmetics)?node-id=0-1&node-type=canvas&t=pP3mI04O1nzFl48T-0">  <img
+            <a href="https://www.figma.com/proto/ViGp8NxPtSesIaO10LX6Nu/resto_app?node-id=707-2&node-type=frame&t=CxJ70Hxr4q3S5MQO-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=703%3A2067&show-proto-sidebar=1">  <img
                 src="./assets/project-3.png"
                 alt="Project 3"
                 class="project-img"
               /></a>
             </div>
-            <h2 class="experience-sub-title project-title">Projet Trois</h2>
+            <h2 class="experience-sub-title project-title">Restau App</h2>
            
           </div>
         </div>
